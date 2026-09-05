@@ -1,0 +1,45 @@
+{
+  "name": "genpark-inverse-kinematics-joint-limit-solver-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - 6-DOF robotic manipulator Cartesian target pose to joint angle inverse kinematics solver enforcing physical angle limits.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "edge-robotics",
+  "tags": [
+    "inverse-kinematics",
+    "robotic-arm",
+    "manipulator",
+    "joint-limits",
+    "kinematics-solver"
+  ],
+  "inputs": {
+    "arm_id": {
+      "type": "string"
+    },
+    "target_x": {
+      "type": "number"
+    },
+    "target_y": {
+      "type": "number"
+    },
+    "target_z": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "solver_solution_id": {
+      "type": "string"
+    },
+    "solution_found": {
+      "type": "boolean"
+    },
+    "joint_angles_deg": {
+      "type": "array"
+    },
+    "manipulability_index": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
